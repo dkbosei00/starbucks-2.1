@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-// import { Button, Col, Container, Form, Row, Alert } from "react-bootstrap";
+import { Button, Col, Container, Form, Row, Alert } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import styles from './styles.module.css';
 import { useLoginMutation } from "../../services/appApi";
@@ -36,7 +36,8 @@ function Login() {
                             <input type="password" name="password" className={`${styles.password} ${styles.input}`} onChange={(e) => setPassword(e.target.value)} value={password}/>
                             <label className={styles.placeholder}>Password</label>
                         </div>
-                        <button type="submit" className={styles.submit_btn}>Sign In</button>
+                        {isError && <Alert variant="danger">{error.data}</Alert>}
+                        <button type="submit" className={styles.submit_btn} disabled={isLoading}>Sign In</button>
             </form>
         </div>
         </div>

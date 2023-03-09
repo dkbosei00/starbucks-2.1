@@ -19,6 +19,20 @@ const productRoutes = require('./routes/productRoutes');
 const orderRoutes = require('./routes/orderRoutes');
 const imageRoutes = require('./routes/imageRoutes');
 
+app.use("*", (req, res, next) => {
+  console.info({
+    scope: "Request",
+    data: {
+      ip: req.header["x-forwarded-for"] || req.socket.remoteAddress,
+      url: req.originalUrl,
+      method: req.method,
+      body: req?.body,
+      date: new Date().toUTCString(),
+    },
+  })
+  next();
+});
+
 app.use(cors());
 app.use(express.urlencoded({extended: true}));
 app.use(express.json());
