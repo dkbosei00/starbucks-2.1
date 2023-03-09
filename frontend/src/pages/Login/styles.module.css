@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Public+Sans:wght@400&display=swap');
+
+
+
+.inner_container{
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+}
+
+.login_page {
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.form_group{
+    position: relative;
+}
+
+.placeholder{
+	position: absolute;
+	top: -10px;
+	left: 0%;
+	font-size: 0.9vw;
+	padding: 0px 5px;
+    font-weight: 400;
+	color: #667;
+	transition: 0.3s;
+	pointer-events: none;
+    font-family: 'Public Sans', sans-serif;
+}
+
+.input:focus + .placeholder {
+	top: -20px;
+	color: black;
+}
+
+.header_container{
+    margin-bottom: 7vh;
+}
+
+.header_container p{
+    font-size: 12px;
+    font-weight: 500;
+    margin-top: 1.4vh;
+    color: rgb(95, 94, 94);
+    font-family: 'Public Sans', sans-serif;
+}
+
+.header_container h1{
+    font-size: 2.2vw;
+    font-family: 'Public Sans', sans-serif;
+    font-weight: 700;
+}
+
+.input:focus {
+	border-bottom: 2px black solid;
+}
+
+.right_container{
+   /* background-image: url('../../assets/backdrop.jpg'); */
+   background-image: url('https://wallpapers.com/images/hd/minimalist-aesthetic-desktop-coffee-icons-rpf0dtdydcvlhtso.jpg');
+   background-repeat: no-repeat;
+   background-position: center;
+    width: 55vw;
+    height: 100vh;
+    object-fit: cover;
+    border-top-left-radius: 35px 35px;
+    border-bottom-left-radius: 35px 35px;
+    position: relative;
+    box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.3);
+}
+
+.left_container{
+    width: 45vw;
+}
+
+.btn_container{
+    /* float: right; */
+    margin-right: 3vw;
+    position: absolute;
+    left: 43vw;
+    /* top: 20vh; */
+}
+
+.logo_main{
+    height: auto;
+    max-width: 100%;
+    width: 60px;
+    margin-left: 2.3vw;
+    margin-top: 2.5vh;
+}
+
+.logo_container{
+    margin-left: -35vw;
+}
+
+.submit_btn {
+    width: 100%;
+    border-radius: 25px;
+    color: white;
+    background: black;
+    padding: 1.5vh;
+    outline: none;
+    border: none;
+    margin-top: 3vh;
+}
+
+.form_container{
+    width: 47%;
+    margin: auto;
+    margin-top: 8vh;
+    /* border: 2px red solid; */
+}
+
+.firstName {
+    min-width: 100%;
+    max-width: 100%;
+    margin-top: 1vh;
+}
+
+.lastName {
+    min-width: 100%;
+    max-width: 100%;
+    margin-top: 1vh;
+}
+
+.email {
+    min-width: 100%;
+    max-width: 100%;
+    margin-top: 1vh;
+}
+
+.password {
+    min-width: 100%;
+    max-width: 100%;
+    margin-top: 1vh;
+}
+
+.firstName, .lastName, .email, .password {
+	background: none;
+	border: none;
+	outline: none;
+	border-bottom: 1.5px solid;
+	color: rgb(180, 178, 178);
+	/* padding: 1vh 0.6vw; */
+    padding-top: 1vh;
+	font-size: 0.9vw;
+	margin-bottom: 4vh;
+
+}
+
+.starbuck_img {
+    width: 76%;
+    z-index: 0;
+}
+
+.starbuck_container{
+    position: absolute;
+    left: 25%;
+    top: 7%;
+    transform: rotate(-15deg);
+}
+
+.coffee_img{
+    width: 87%;
+    margin-left: 4%;
+    margin-top: 4vh;
+    z-index: 1;
+}
+
+.login_btn {
+    color: white;
+    background: black;
+    padding: 1.6vh;
+    width: 10vw;
+    /* margin-right: 4vw; */
+    margin-top: 2vh;
+    border-radius: 20px;
+    border: none;
+}
+
+.login_btn:hover {
+    cursor: pointer;
+    background-color: green;
+    color: white;
+    transition: all .4s ease-in-out;
+}
+
+.submit_btn:hover {
+    cursor: pointer;
+    background-color: green;
+    color: white;
+    transition: all .4s ease-in-out;
+}

@@ -1,0 +1,11 @@
+.logo_main{
+height: auto;
+max-width: 100%;
+width: 60px;
+margin-left: 2.3vw;
+margin-top: 2.5vh;
+}
+
+.logo_container{
+    margin-left: -7vw;
+}
