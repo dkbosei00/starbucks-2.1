@@ -16,9 +16,12 @@ function Signup() {
     const [lastName, setlastName] = useState("");
     const [signup, { error, isLoading, isError }] = useSignupMutation();
 
+    console.log(signup);
+
     function handleSignup(e) {
         e.preventDefault();
-        signup({ firstName, lastName, email, password });
+        
+        signup({firstName, lastName, email, password});
     }
 
     return (
@@ -31,7 +34,7 @@ function Signup() {
                         <h1>Create an account</h1>
                         <p>Let's get started with your order by creating an account</p>
                     </div>
-                    <form onSubmit={handleSignup}>
+                    <form  onSubmit={(e) => handleSignup(e)}>
                         <div className={styles.form_group}>
                             <input type="text" name="firstName" onChange={(e) => setfirstName(e.target.value)} className={`${styles.firstName} ${styles.input}`} value={firstName}/>
                             <label className={styles.placeholder}>First Name</label>

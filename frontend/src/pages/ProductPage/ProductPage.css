@@ -1,10 +1,167 @@
-.product__carousel--image {
+/* .product__carousel--image {
     max-width: 100%;
     object-fit: cover;
     max-height: 500px;
+    border-radius: 50%;
+    background-color: rgb(37, 127, 37);
+} */
+
+.product__carousel--image {
+    width: 500px;
+    height: 500px;
+    max-width: 100%;
+    max-height: 500px;
+    object-fit: cover;
+    border-radius: 50%;
+    background-color: rgba(58,136,105,255);
+}
+
+/* .product-similar{
+    width: 200px;
+    height: 200px;
+    max-width: 100%;
+    max-height: 500px;
+    object-fit: cover;
+    border-radius: 50%;
+    background-color: rgba(58,136,105,255);
+} */
+
+.product-similar{
+    background-color: red;
 }
 
 .alice-carousel__prev-btn,
 .alice-carousel__next-btn {
     display: none !important;
+}
+
+.product-details{
+    text-align: left;
+}
+
+.product-details h1 {
+    font-family: poppins;
+    font-size: 3vw;
+}
+
+.add-to-cart-btn{
+    background-color: rgba(58,136,105,255);
+    color: white;
+    font-family: poppins;
+    width: 3vw;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.9vw;
+}
+
+.product__price{
+    color: rgba(58,136,105,255);
+    font-family: poppins;
+    font-weight: 600;
+    font-size: 1.6vw;
+}
+
+.product-desc{
+ width: 30vw;
+ font-size: 0.9vw;
+ font-family: poppins;
+ line-height: 180%;
+}
+
+.cart-icon{
+    width: 18px;
+    margin-left: 1vw;
+    color: white;
+}
+
+/* AliceCarousel {
+    border-radius: 50%;
+    background-color: rgb(37, 127, 37);
+} */
+
+.background-div {
+    background-image: red;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+.sim-header{
+    font-family: poppins;
+    font-size: 1.2vw;
+    font-weight: 600;
+    margin-bottom: 2.7vw;
+}
+
+.sim-wrapper{
+    text-align: left;
+}
+
+.rating-stars{
+    display: flex;
+    flex-direction: row;
+    gap: 0.35vw;
+}
+
+.rating-stars img{
+width: 1vw;
+}
+
+.price-rate{
+    display: flex;
+    flex-direction: row;
+    gap: 2vw;
+}
+
+.cup-sizes{
+    display: flex;
+    flex-direction: row;
+    gap: 2vw;
+    margin-top: 2vw;
+    margin-bottom: 4vw;
+}
+
+.cup-small{
+    width: 3vw;
+    margin-top: 1vw;
+    cursor: pointer;
+}
+
+.cup-medium{
+    width: 3.5vw;
+    margin-top: 0.71vw;
+    cursor: pointer;
+}
+
+.cup-large{
+    width: 4vw;
+    margin-top: 0.37vw;
+    cursor: pointer;
+}
+
+.size-header{
+    font-family: poppins;
+    font-size: 1.2vw;
+    font-weight: 600;
+}
+
+.size-name{
+    font-family: poppins;
+    font-size: 0.9vw;
+    font-weight: 600;
+}
+
+.size-m {
+    font-family: poppins;
+    font-size: 0.75vw;
+    margin-top: -0.8vw;
+}
+
+.size-det{
+    margin-top: 1vw;
+    text-align: center;
 }

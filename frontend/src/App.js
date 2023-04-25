@@ -42,11 +42,11 @@ function App() {
                 <ScrollToTop />
                 {/* <Navigation /> */}
                 <Routes>
-                    <Route index element={<Signup />} />
+                    <Route index element={<Home />} />
                     {!user && (
                         <>
                         <Route path="/signup" element={<Signup />} />
-                            <Route path="/login" element={<Login />} />      
+                        <Route path="/login" element={<Login />} />      
                         </>
                     )}
 

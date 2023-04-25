@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@300&display=swap');
+
 .images-preview-container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(min(100px, 100%), 1fr));
@@ -32,8 +34,102 @@
 }
 
 .new-product__image--container {
-    background-image: url(https://images.unsplash.com/photo-1652773899966-583e9d2f2fb0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzR8fHRlY2h8ZW58MHwxfDB8d2hpdGV8&auto=format&fit=crop&w=800&q=60);
+    /* background-image: url(https://images.unsplash.com/photo-1652773899966-583e9d2f2fb0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzR8fHRlY2h8ZW58MHwxfDB8d2hpdGV8&auto=format&fit=crop&w=800&q=60);
     background-size: cover;
+    background-position: center; */
+     height: 100vh; 
+
+}
+
+.new-product-page{
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+.add-product-container{
+    /* background-image: url("../../assets/new-product-bg.jpg"); */
+    background-size: cover;
+    background-color: rgb(179, 197, 217);
     background-position: center;
     height: 100vh;
 }
+
+.new-product__form--container{
+    background-color: white;
+    margin-left: 25vw;
+    height: 100vh;
+    border-radius: 7px;
+}
+
+.desc-div, .category-div, .images-div{
+    /* border: 2px red solid; */
+    text-align: left;
+    width: 100%;
+}
+
+.desc-div h3, .category-div h3, .images-div h3{
+    font-size: 1vw;
+    font-weight: 600;
+    color: rgb(75, 73, 73);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.desc-inner, .pricing-inner, .images-inner{
+    border: 1px rgb(189, 186, 186) solid;
+    border-radius: 7px;
+    padding: 1vw;
+}
+
+.new-label{
+    font-size: 0.8vw;
+    margin-bottom: -0.1vw;
+    font-weight: 600;
+    color: grey;
+}
+
+h1{
+    font-size: 1.4vw;
+    font-weight: 700;
+    color: rgb(52, 51, 51);
+}
+
+#second-div{
+    margin-top: 2vw;
+}
+
+.container-new-all{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 2.3vw;
+}
+
+.new-div-left{
+    width: 50%;
+}
+
+.new-div-right{
+    width: 45%;
+}
+
+.upload-btn{
+    background-color: black;
+    font-size: 0.71vw;
+    border-radius: 8px;
+    border: none;
+}
+
+.create-btn{
+    background-color: rgb(19, 130, 19);
+    border-radius: 8px;
+    border: none;
+    font-size: 0.8vw;
+    margin-top: 2vw;
+    margin-right: 15vw;
+}
+
+::placeholder {
+    color: gray;
+    font-size: 0.8vw;
+  }
+  

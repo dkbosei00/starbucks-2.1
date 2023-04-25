@@ -32,7 +32,7 @@ function Navigation() {
     }
 
     return (
-        <Navbar bg="light" expand="lg">
+        <Navbar expand="lg" style={{backgroundColor: " #DFCBBB"}}>
             <Container>
                 <LinkContainer to="/">
                     <div className={styles.logo_container}><img src={Starbuck} alt="logo-main" className={styles.logo_main}/></div>
