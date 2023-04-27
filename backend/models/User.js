@@ -3,7 +3,12 @@ const bcrypt = require('bcrypt');
 
 const UserSchema = mongoose.Schema({
 
-  name: {
+  firstName: {
+    type: String,
+    required: [true, 'is required']
+  },
+
+  lastName: {
     type: String,
     required: [true, 'is required']
   },
@@ -48,6 +53,8 @@ const UserSchema = mongoose.Schema({
 
 }, {minimize: false});
 
+
+// Password verifications upon login
 
 UserSchema.statics.findByCredentials = async function(email, password) {
   const user = await User.findOne({email});
