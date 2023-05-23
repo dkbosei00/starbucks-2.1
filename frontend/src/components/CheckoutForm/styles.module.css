@@ -1,0 +1,15 @@
+.cart_form { 
+    background-color: white;
+    /* border: 2px red solid; */
+    border-radius: 7px;
+    padding: 1.9vw 1.8vw 0 1.8vw;
+}
+
+.first_row{
+    text-align: left;
+}
+
+.label{
+    font-family: poppins;
+    font-size: 0.87vw;
+}

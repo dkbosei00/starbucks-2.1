@@ -16,3 +16,92 @@
     max-height: 70vh;
     overflow: scroll;
 }
+
+.cart-form-container-main{
+    text-align: left;
+    /* margin-top: 3vw; */
+}
+
+.cart-container{
+    background-color:#eaeaea;
+    padding: 3vw  7vw 0 7vw;
+}
+
+.item-row{
+    display: flex;
+    flex-direction: row;
+    /* gap: 2vw; */
+    padding: 0 2vw 0 2vw;
+    /* border: 1px red solid; */
+    margin-bottom: 1.5vw;
+    font-family: poppins;
+    text-align: center;
+}
+
+.name-price{
+    display: flex;
+    flex-direction: column;
+}
+
+.item-text{
+    padding-top: 1.7vw;
+}
+
+.item-price{
+    color: #aaaaaa;
+    font-size: 0.85vw;
+}
+
+.price-per-item{
+    margin-left: 7vw;
+}
+
+.quantity-per-item{
+    margin-left: 2.5vw;
+}
+
+.item-name-cart{
+    margin-left: 1.5vw;
+}
+
+.first-cart-row{
+    border-bottom: 2px #f1f1f1 solid;
+}
+
+.total-price{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-family: poppins;
+    margin-top: 4vw;
+}
+
+.total-text{
+    font-size: 0.9vw;
+}
+
+.total-amount{
+    font-size: 2vw;
+    font-weight: 600;
+}
+
+.product-details-div{
+    background-color: white;
+    border-radius: 6px;
+    margin-left: 1vw;
+}
+
+.cart-form-header{
+    font-family: poppins;
+    font-size: 0.9vw;
+    font-weight: 600;
+}
+
+.cart-sum-container-main {
+    /* border: 1px red solid; */
+    text-align: left;
+}
+
+/* .cart-main-row{
+    margin-top: 4vw;
+} */
