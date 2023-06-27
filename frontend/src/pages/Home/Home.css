@@ -72,7 +72,24 @@ select {
     border-radius: 20px;
   }
 
+  .seemore-con{
+    /* border: 2px red solid; */
+    width: 85vw;
+    margin: auto;
+  }
   .seemore-btn{
-    margin-right: 7vw;
+    margin-left: auto;
     margin-top: 2vh;
+    background-color: rgb(52, 51, 51);
+    color: whitesmoke;
+    float: right;
+    border: none;
+    border-radius: 7px;
+    padding: 0.4vw;
+    font-size: 0.8vw;
+  }
+
+  .seemore-btn a {
+    text-decoration: none;
+    color: whitesmoke;
   }

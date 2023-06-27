@@ -1,0 +1,18 @@
+.banner1_div{
+    display: flex;
+    flex-direction: row;
+    /* height: 100vh; */
+}
+
+.starbucks_res{
+    width: 50vw;
+    height: 100vh;
+}
+
+.banner1_inner1{
+    background-color: #2f5b4d;
+    color: white;
+    width: 50vw;
+    height: 100vh;
+}
+

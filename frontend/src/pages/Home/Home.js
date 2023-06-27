@@ -12,6 +12,7 @@ import ProductPreview from "../../components/ProductPreview";
 import Navigation from "../../components/Navigation/Navigation";
 import styles from "./styles.module.css";
 import Hero from "../../components/Hero/Hero";
+import Banner from "../../components/HomeBanner/Banner";
 
 function Home() {
   const dispatch = useDispatch();
@@ -46,21 +47,23 @@ function Home() {
           ))}
         </Row>
       </div>
-      <div className="seemore-btn">
-          <Link
-            to="/category/all"
+      <div className="seemore-con">
+        <button className="seemore-btn">
+          {/* <Link
+            to=""
             style={{
               textAlign: "right",
               display: "block",
               textDecoration: "none",
             }}
-          >
-            See more {">>"}
-          </Link>
-        </div>
+          > */}
+            <a href="/category/all">See more {">>"}</a>
+          {/* </Link> */}
+        </button>
+      </div>
       <div
         className="featured-products-container mt-5"
-        style={{ textAlign: "left"}}
+        style={{ textAlign: "left" }}
       >
         <div className="filter-tab">
           <div className="styles-distance">
@@ -104,10 +107,8 @@ function Home() {
             </select>
           </div>
           <div className="">
-              <button className="filter-btn">
-                filter
-              </button>
-            </div>
+            <button className="filter-btn">filter</button>
+          </div>
         </div>
         <h2
           style={{
@@ -130,6 +131,7 @@ function Home() {
       {/* <div className="sale__banner--container mt-4">
                 <img src="https://res.cloudinary.com/learn-code-10/image/upload/v1654093280/xkia6f13xxlk5xvvb5ed.png" alt=""/>
             </div> */}
+        <Banner />
     </div>
   );
 }
