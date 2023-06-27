@@ -43,7 +43,10 @@ function Navigation() {
                         {/* if no user */}
                         {!user && (
                             <LinkContainer to="/login">
-                                <Nav.Link>Login</Nav.Link>
+                                <button className="nav-login-btn">
+                                {/* <Nav.Link>Login</Nav.Link> */}
+                                Login
+                                </button>  
                             </LinkContainer>
                         )}
                         {user && !user.isAdmin && (

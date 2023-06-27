@@ -71,3 +71,8 @@ select {
     min-width: 7vw;
     border-radius: 20px;
   }
+
+  .seemore-btn{
+    margin-right: 7vw;
+    margin-top: 2vh;
+  }

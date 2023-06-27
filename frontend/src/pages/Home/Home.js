@@ -46,7 +46,7 @@ function Home() {
           ))}
         </Row>
       </div>
-      <div>
+      <div className="seemore-btn">
           <Link
             to="/category/all"
             style={{
