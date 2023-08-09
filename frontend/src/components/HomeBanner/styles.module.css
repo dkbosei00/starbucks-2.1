@@ -68,7 +68,7 @@
   --slice-4: inset(40% -6px 43% 0);
   --slice-5: inset(80% -6px 5% 0);
   
-  content: 'ALTERNATE TEXT';
+  content: 'ALL SALE OFF';
   display: block;
   position: absolute;
   top: 0;
@@ -162,4 +162,44 @@
     font-weight: 600;
     color: #2f5b4d;
     text-transform:uppercase;
+}
+
+.boy_img{
+  width: 28%;
+  height: 90vh;
+  margin-top: 20vh;
+}
+
+.worker_img{
+  width: 100%;
+  height: 60vh;
+}
+
+.banner3_div{
+  background-color: #d9e2df;
+}
+
+.banner3_inner{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.banner3_inner_btm{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.banner3_inner_btm p{
+  font-family: Poppins;
+}
+
+.banner3_quote{
+  color: green;
+  font-family: 'Poppins';
+}
+
+.banner3_quote p{
+  text-align: left;
 }
