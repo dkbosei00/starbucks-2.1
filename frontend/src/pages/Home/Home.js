@@ -13,6 +13,7 @@ import Navigation from "../../components/Navigation/Navigation";
 import styles from "./styles.module.css";
 import Hero from "../../components/Hero/Hero";
 import Banner from "../../components/HomeBanner/Banner";
+import Footer from "../../components/Footer/Footer";
 
 function Home() {
   const dispatch = useDispatch();
@@ -57,7 +58,7 @@ function Home() {
               textDecoration: "none",
             }}
           > */}
-            <a href="/category/all">See more {">>"}</a>
+          <a href="/category/all">See more {">>"}</a>
           {/* </Link> */}
         </button>
       </div>
@@ -131,7 +132,8 @@ function Home() {
       {/* <div className="sale__banner--container mt-4">
                 <img src="https://res.cloudinary.com/learn-code-10/image/upload/v1654093280/xkia6f13xxlk5xvvb5ed.png" alt=""/>
             </div> */}
-        <Banner />
+      <Banner />
+      <Footer />
     </div>
   );
 }
