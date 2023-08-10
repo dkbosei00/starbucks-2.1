@@ -5,6 +5,7 @@ import Boy from "../../assets/boy-smiling.jpg";
 import Workers from "../../assets/workers.jpg";
 import {FaQuoteLeft, FaQuoteRight} from "react-icons/fa";
 
+
 const Banner = () => {
   return (
     <div className={styles.banner_container}>
