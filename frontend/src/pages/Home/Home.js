@@ -27,7 +27,9 @@ function Home() {
       <Navigation />
       <Hero />
       <div className="recent-products-container container mt-4">
+        <div className={styles.category_header}>
         <h2>Categories</h2>
+        </div>
         <Row>
           {categories.map((category) => (
             <LinkContainer
@@ -36,7 +38,7 @@ function Home() {
               <Col md={3}>
                 <div
                   style={{
-                    backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${category.img})`,
+                    backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5)), url(${category.img})`,
                     gap: "10px",
                   }}
                   className={styles.category_tile}

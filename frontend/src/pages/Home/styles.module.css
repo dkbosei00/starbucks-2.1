@@ -11,10 +11,19 @@
     padding-right: 20px !important;
     display: flex;
     justify-content: center;
+    font-family: 'Poppins';
     align-items: center;
     color: white;
-    font-size: 30px;
+    font-size: 27px;
     cursor: pointer;
     transition: all 0.3s;
     margin-top: 30px;
+}
+
+.category_header{
+    /* border: 2px red solid; */
+    font-size: 1.6vw;
+    display: flex;
+    font-family: 'Poppins';
+    justify-content: start;
 }
