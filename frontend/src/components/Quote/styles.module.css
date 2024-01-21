@@ -1,0 +1,36 @@
+/* .banner2_div {
+    background-color: #d9e2df;
+    height: 80vh;
+    padding-top: 12vh;
+  }
+   */
+  /* .banner2_inner2{
+      /* margin: 12vh 2vw;
+  } */
+
+  .quote_container{
+    margin: 14vh 0vh;
+  }
+  
+  .banner2_main h1 {
+    font-size: 3vw;
+    color: #2f5b4d;
+    text-transform: uppercase;
+  }
+  
+  .banner2_main p {
+    font-size: 2vw;
+    font-weight: 600;
+    color: #2f5b4d;
+    text-transform: uppercase;
+  }
+
+  .quote_left{
+    margin-top: -3vh; 
+    width: 1.5vw;
+  }
+  
+  .quote_right{
+    margin-top: -3vh; 
+    width: 1.5vw;
+  }
