@@ -17,6 +17,7 @@ import Footer from "../../components/Footer/Footer";
 import AdCard from "../../components/AdCard/AdCard";
 import Quote from "../../components/Quote/Quote";
 import Support from "../../components/Support/Support";
+import Review from "../../components/Review/Review";
 
 function Home() {
   const dispatch = useDispatch();
@@ -142,6 +143,7 @@ function Home() {
         <AdCard />
       </div>
       <Banner />
+      <Review />
       <Support />
       <Footer />
     </div>
