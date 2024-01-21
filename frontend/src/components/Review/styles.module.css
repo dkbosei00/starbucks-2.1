@@ -1,0 +1,138 @@
+/* styles.module.css */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500&display=swap');
+
+.review_main_container {
+    /* border: 2px red solid; */
+    height: 80vh;
+    background: #edf1f0;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.inner_container {
+    padding: 3vh 0vh;
+}
+
+.header_container {
+    text-align: left;
+    width: 80%;
+    margin: 6vh auto 4vh auto;
+}
+
+.header_container h1 {
+    font-size: 7vh;
+}
+
+.sliderContainer {
+    overflow: hidden;
+    width: 95%;
+    margin: 0 auto;
+    position: relative;
+    cursor: grab;
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+    padding: 2vw;
+}
+
+.slide {
+    min-width: calc(100% / 2.7);
+    /* Adjust to show 4 cards at a time */
+    box-sizing: border-box;
+    text-align: center;
+    /* padding: 20px; */
+    /* border: 1px solid #ddd; */
+    border-radius: 8px;
+    /* Add border-radius */
+    margin-right: 20px;
+    display: flex;
+    flex-direction: row;
+    box-shadow: 0 5px 22px rgba(0, 0, 0, .1)
+        /* Add box-shadow */
+}
+
+
+.slide img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+/* Add these styles for cursor feedback during drag */
+.sliderContainer:active {
+    cursor: grabbing;
+}
+
+/* Optional: Style the scrollbar */
+.sliderContainer::-webkit-scrollbar {
+    height: 8px;
+}
+
+.sliderContainer::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 4px;
+}
+
+.sliderContainer::-webkit-scrollbar-track {
+    background-color: #eee;
+}
+
+
+.text_container {
+    background: white;
+    width: 65%;
+    padding: 2.5vw 0vw;
+    text-align: left;
+    line-height: 190%;
+    font-size: 0.9vw;
+    /* border: 2px red solid; */
+}
+
+.text_container_inner{
+    width: 80%;
+    margin: auto;
+    height: 80%;
+    /* border: 2px red solid; */
+}
+
+.comment, .location{
+    color: #828282;
+}
+
+.image_container {
+    width: 35%;
+}
+
+.image_inner{
+    /* border: 2px red solid; */
+    height: 50%;
+    margin-top: 30%;
+}
+
+.rating_stars {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 1vh;
+}
+
+.rating_stars img {
+    width: 1vw;
+}
+
+.reviewer_det {
+    /* border: 2px rgb(177, 118, 208) solid; */
+    display: flex;
+    flex-direction: column;
+    gap: -20px;
+}
+
+.name{
+    /* border: 2px green solid; */
+    height: 4vh;
+}
+
+.loc{
+    /* border: 2px orange solid; */
+    font-size: 0.85vw;
+    height: 4vh;
+}
