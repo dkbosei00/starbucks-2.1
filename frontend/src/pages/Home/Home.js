@@ -14,6 +14,9 @@ import styles from "./styles.module.css";
 import Hero from "../../components/Hero/Hero";
 import Banner from "../../components/HomeBanner/Banner";
 import Footer from "../../components/Footer/Footer";
+import AdCard from "../../components/AdCard/AdCard";
+import Quote from "../../components/Quote/Quote";
+import Support from "../../components/Support/Support";
 
 function Home() {
   const dispatch = useDispatch();
@@ -28,7 +31,7 @@ function Home() {
       <Hero />
       <div className="recent-products-container container mt-4">
         <div className={styles.category_header}>
-        <h2>Categories</h2>
+          <h2>Categories</h2>
         </div>
         <Row>
           {categories.map((category) => (
@@ -134,7 +137,12 @@ function Home() {
       {/* <div className="sale__banner--container mt-4">
                 <img src="https://res.cloudinary.com/learn-code-10/image/upload/v1654093280/xkia6f13xxlk5xvvb5ed.png" alt=""/>
             </div> */}
+      <div className="container" style={{padding: "0vw 3vw"}}>
+        <Quote />
+        <AdCard />
+      </div>
       <Banner />
+      <Support />
       <Footer />
     </div>
   );

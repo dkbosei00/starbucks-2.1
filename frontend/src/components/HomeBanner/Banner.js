@@ -38,7 +38,7 @@ const Banner = () => {
           <img src={Starbucks} alt="alal" className={styles.starbucks_res} />
         </div>
       </div>
-      <div className={styles.banner2_div}>
+      {/* <div className={styles.banner2_div}>
         <div className={styles.banner2_inner2}>
           <div className={styles.banner2_main}>
             <h1>
@@ -49,7 +49,7 @@ const Banner = () => {
             <p>- STARBUCKS</p>
           </div>
         </div>
-      </div>
+      </div> */}
       <div className={styles.banner3_div}>
         <div className={styles.banner3_inner}>
           <img src={Boy} alt="" className={styles.boy_img} />
