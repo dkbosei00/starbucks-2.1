@@ -18,6 +18,9 @@ import AdCard from "../../components/AdCard/AdCard";
 import Quote from "../../components/Quote/Quote";
 import Support from "../../components/Support/Support";
 import Review from "../../components/Review/Review";
+import Faq from "../../components/FAQ/Faq";
+import Animations from "../../components/Animations/Animations";
+import Process from "../../components/Processes/Process";
 
 function Home() {
   const dispatch = useDispatch();
@@ -143,6 +146,9 @@ function Home() {
         <AdCard />
       </div>
       <Banner />
+      <Process />
+      <Animations />
+      <Faq />
       <Review />
       <Support />
       <Footer />

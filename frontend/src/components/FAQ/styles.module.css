@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500&display=swap');
+
+.faq_container{
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.faq_inner {
+  display: flex;
+  flex-direction: row;
+  /* border: 2px red solid; */
+  width: 80%;
+  height: 90vh;
+  margin: auto;
+}
+
+.accordion_div,
+.images_div {
+  width: 50%;
+}
+
+.accordion_inner {
+  width: 90%;
+  margin: auto;
+  text-align: left;
+}
+
+.accordion_div h1 {
+  font-size: 3vw;
+}
+
+.images_div {
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+  /* Ensures that any content exceeding the container is hidden */
+}
+
+.images_div_inner {
+  position: relative;
+  margin-left: 17vw;
+}
+
+.left_img {
+  background: url('../../assets/employee-male.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 57vh;
+  margin-left: -13vw;
+  width: 19vw;
+  border-radius: 20px;
+  margin-top: 14vh;
+  position: absolute;
+  transform-origin: left center;
+  transform:  skewX(9deg) skewY(-9deg);
+  /* Combine rotateY and skewY */
+  z-index: 1;
+  /* Ensure left_img is above right_img */
+}
+
+.right_img {
+  background: url('../../assets/drive-thru.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 75vh;
+  width: 22vw;
+  border-radius: 20px;
+  position: absolute;
+  z-index: 0;
+  /* Default z-index for right_img */
+}
+
+.header_2 {
+  margin: 4vh 0vh;
+}
+
+.accordion{
+  color: white;
+}
+
+.accordion_button {
+  background-color: #495f11;
+  color: #ffffff;
+}
+
+/* .accordion_button.collapsed {
+  /* background-color: #495f11; */
+  /* Add any other styles you want for the collapsed state */
+/* } */
+
+/* .accordion_item{
+  background: #495f11;
+} */
