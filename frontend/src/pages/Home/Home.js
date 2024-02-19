@@ -145,7 +145,7 @@ function Home() {
         <Quote />
         <AdCard />
       </div>
-      <Banner />
+      {/* <Banner /> */}
       <Process />
       <Animations />
       <Faq />
