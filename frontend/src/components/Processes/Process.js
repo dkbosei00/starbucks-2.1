@@ -68,7 +68,7 @@ const Process = () => {
           <div className={styles.cards_container}>
             <div
               className={styles.card}
-              style={{ background: "rgb(218, 255, 153)" }}
+              style={{ background: "rgb(153 240 255)" }}
             >
               <div className={styles.card_inner}>
                 <div className={styles.logo}>

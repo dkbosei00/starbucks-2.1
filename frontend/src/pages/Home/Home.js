@@ -141,7 +141,7 @@ function Home() {
       {/* <div className="sale__banner--container mt-4">
                 <img src="https://res.cloudinary.com/learn-code-10/image/upload/v1654093280/xkia6f13xxlk5xvvb5ed.png" alt=""/>
             </div> */}
-      <div className="container" style={{padding: "0vw 3vw"}}>
+      <div>
         <Quote />
         <AdCard />
       </div>
