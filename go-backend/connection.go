@@ -11,7 +11,7 @@ import (
 	"go.mongodb.org/mongo-driver/mongo/options"
 )
 
-func Connect() {
+func Connect() *mongo.Client {
 	// Find .env
 	if err := godotenv.Load(".env"); err != nil {
 		log.Fatalf("Error loading env file: %s", err)
@@ -41,4 +41,6 @@ func Connect() {
 	} else {
 		fmt.Println("Connected to db!")
 	}
+
+	return client
 }
