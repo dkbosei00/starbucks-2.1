@@ -17,6 +17,18 @@ import (
 	"golang.org/x/crypto/bcrypt"
 )
 
+type Picture struct {
+	URL string `bson:"url"`
+}
+
+type Product struct {
+	ID          primitive.ObjectID `bson:"_id"`
+	Name        string             `bson:"name,omitempty"`
+	Description string             `bson:"description,omitempty"`
+	Price       string             `bson:"price,omitempty"`
+	Pictures    []Picture          `bson:"pictures"`
+}
+
 type User struct {
 	ID        primitive.ObjectID `bson:"_id"`
 	FirstName string             `bson:"firstName,omitempty"`
@@ -30,10 +42,27 @@ func main() {
 	// Initialise router
 	router := mux.NewRouter()
 
-	// Define register API
-	router.HandleFunc("/users", GetUsersHandler).Methods(http.MethodGet)
-	router.HandleFunc("/register", RegisterHandler).Methods(http.MethodPost)
-	router.HandleFunc("/login", loginHandler).Methods(http.MethodPost)
+	// Middleware
+	router.Use(corsMiddleware)
+
+	// Define users APIs
+	users := router.PathPrefix("/users").Subrouter()
+	users.HandleFunc("/register", RegisterHandler).Methods(http.MethodPost, http.MethodOptions)
+	users.HandleFunc("/login", loginHandler).Methods(http.MethodPost, http.MethodOptions)
+	users.HandleFunc("/all", GetUsersHandler).Methods(http.MethodGet, http.MethodOptions)
+
+	// Define products APIs
+	products := router.PathPrefix("/products").Subrouter()
+	products.HandleFunc("/", GetProductsHandler).Methods(http.MethodGet, http.MethodOptions)
+	products.HandleFunc("/{product_id}", nil).Methods(http.MethodPost, http.MethodOptions, http.MethodPatch)
+	products.HandleFunc("/add-to-cart", nil).Methods(http.MethodPost, http.MethodOptions)
+	products.HandleFunc("/remove-from-cart", nil).Methods(http.MethodPost, http.MethodOptions)
+	products.HandleFunc("/increase-cart", nil).Methods(http.MethodPost, http.MethodOptions)
+	products.HandleFunc("/decrease-cart", nil).Methods(http.MethodPost, http.MethodOptions)
+
+	// Define orders APIs
+	orders := router.PathPrefix("/orders").Subrouter()
+	orders.HandleFunc("/", nil).Methods(http.MethodPost)
 
 	fmt.Println("Server is running on port 8080")
 
@@ -91,7 +120,8 @@ func RegisterHandler(w http.ResponseWriter, r *http.Request) {
 	json.NewDecoder(r.Body).Decode(&user)
 	user.Password = getHash([]byte(user.Password))
 	coll := client.Database("ecomernyt").Collection("users")
-	ctx, _ := context.WithTimeout(context.Background(), 10*time.Second)
+	ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
+	defer cancel()
 	result, err := coll.InsertOne(ctx, user)
 	if err != nil {
 		w.WriteHeader(http.StatusInternalServerError)
@@ -128,7 +158,8 @@ func loginHandler(w http.ResponseWriter, r *http.Request) {
 
 	json.NewDecoder(r.Body).Decode(&user)
 	coll := client.Database("ecomernyt").Collection("users")
-	ctx, _ := context.WithTimeout(context.Background(), 10*time.Second)
+	ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
+	defer cancel()
 	if err := coll.FindOne(ctx, bson.M{"email": user.Email}).Decode(&dbuser); err != nil {
 		w.WriteHeader(http.StatusInternalServerError)
 		w.Write([]byte(`{"message":"` + err.Error() + `"}`))
@@ -163,4 +194,67 @@ func generateJWT(secretKey []byte) (string, error) {
 		return "", err
 	}
 	return tokenString, nil
+}
+
+func enableCors(w *http.ResponseWriter, r *http.Request) {
+	(*w).Header().Set("Access-Control-Allow-Origin", "*")
+	(*w).Header().Set("Access-Control-Allow-Methods", "GET, POST, OPTIONS")
+	(*w).Header().Set("Access-Control-Allow-Headers", "Content-Type, Authorization")
+
+	// Handle preflight OPTIONS request
+	if r.Method == "OPTIONS" {
+		return
+	}
+}
+
+func corsMiddleware(next http.Handler) http.Handler {
+	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		enableCors(&w, r)
+		if r.Method == "OPTIONS" {
+			// Respond OK to OPTIONS requests for preflight checks
+			w.WriteHeader(http.StatusOK)
+			return
+		}
+		next.ServeHTTP(w, r)
+	})
+}
+
+// Products Functions
+func GetProductsHandler(w http.ResponseWriter, r *http.Request) {
+
+	client := Connect()
+
+	// Set the content type of the response to JSON
+	w.Header().Set("Content-Type", "application/json")
+
+	// Call client from MongoDB
+	coll := client.Database("ecomernyt").Collection("products")
+
+	// Empty filter. Return all
+	filter := bson.D{{}}
+
+	cursor, err := coll.Find(context.TODO(), filter)
+	if err != nil {
+		panic(err)
+	}
+
+	defer cursor.Close(context.TODO())
+
+	// Loop through results from cursor and write in response
+	for cursor.Next(context.TODO()) {
+		var product Product
+		if err := cursor.Decode(&product); err != nil {
+			panic(err)
+		}
+
+		output, err := json.MarshalIndent(product, "", "    ")
+		if err != nil {
+			panic(err)
+		}
+		fmt.Fprint(w, string(output))
+	}
+
+	if err := cursor.Err(); err != nil {
+		panic(err)
+	}
 }

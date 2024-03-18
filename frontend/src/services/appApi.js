@@ -4,11 +4,11 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
 export const appApi = createApi({
     reducerPath: "appApi",
-    baseQuery: fetchBaseQuery({ baseUrl: "https://starbucks-vv25.onrender.com" }),
+    baseQuery: fetchBaseQuery({ baseUrl: "http://localhost:8080" }),
     endpoints: (builder) => ({
         signup: builder.mutation({
             query: (user) => ({
-                url: "/users/signup",
+                url: "/users/register",
                 method: "POST",
                 body: user,
             }),
